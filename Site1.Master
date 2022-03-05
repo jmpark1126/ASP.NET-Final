@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Final.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .header { height: 130px;
+            width: auto;
+            background-color: darkseagreen;
+            color: white;
+            padding: 10px;
+            font-size: x-large;
+            text-align: left;    }
+        .login { float: right; width: 300px; min-height: 300px;
+                 background-color: lightsteelblue; color: white; padding: 10px; }
+        .nav { float: left; width: 150px; min-height: 300px;
+               background-color: honeydew; padding: 10px;     }
+        .article { float: left; min-width: 400px; min-height: 300px;
+                   padding: 10px;      }
+        .footer {
+            clear: both;
+            width : auto;
+            height: 200px;
+            background-color: silver;
+            padding: 10px;
+            font-size: small;
+            text-align: center;
+        }
+        .auto-style1 {
+            color: #0066FF;
+        }
+        .auto-style2 {
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:ImageButton ID="ImageButton4" runat="server" Height="135px" ImageUrl="~/Logo/Flogo.png" PostBackUrl="~/Home.aspx" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Logo/welcome.png" Width="500px" />
+        </div>
+        <div class="login">
+            <asp:Panel ID="Panel3" runat="server">
+                <strong>로그인하고 더 많은 정보를 만나봐요!</strong></asp:Panel>
+            <asp:Panel ID="Panel4" runat="server">
+                로그인 해주셔서 고맙습니다!
+                <br />
+                다양한 반려식물을 만나보세요!</asp:Panel>
+            &nbsp;<asp:Panel ID="Panel1" runat="server" Width="317px">
+                <asp:Button ID="Button1" runat="server" Text="로그인" OnClick="Button1_Click1" />
+                &nbsp;<asp:Button ID="Button2" runat="server" Text="회원 가입" OnClick="Button2_Click1" />
+            </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server" Width="316px">
+                    &nbsp;<strong><asp:Label ID="Label1" runat="server" CssClass="auto-style1"></asp:Label>
+                    &nbsp;<br /> &nbsp;
+                    <br />
+                    </strong>
+                    <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="로그아웃" />
+                    &nbsp;<asp:Button ID="Button4" runat="server" Text="내 정보수정" OnClick="Button4_Click1" />
+                </asp:Panel>
+            <br />
+            <br />
+            <asp:Panel ID="Panel5" runat="server">
+                <strong>- 추천하는 이벤트 1</strong></asp:Panel>
+            <br />
+            <asp:ImageButton ID="ImageButton5" runat="server" Height="240px" ImageUrl="~/Logo/Sale.PNG" PostBackUrl="~/Exclusiveness.aspx" ToolTip="당신을 위한 상품이 준비되어있습니다!" />
+            <br />
+            <br />
+            <br />
+            <asp:Panel ID="Panel6" runat="server">
+                <strong>- 추천하는 이벤트 2</strong></asp:Panel>
+            <br />
+            <asp:ImageButton ID="ImageButton7" runat="server" Height="250px" ImageUrl="~/Logo/plant.PNG" PostBackUrl="~/Poinsettia.aspx" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <strong>스마트IT과 2A 202031011 박지민</strong><br />
+        </div>
+        
+        <div class="nav">
+            <br />
+            <strong>
+            <asp:Label ID="Label2" runat="server" CssClass="auto-style2"></asp:Label>
+            </strong>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">MainHome</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ShowTable.aspx">테이블 레코드보기(ShowTable)</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Search.aspx">상품찾아보기(Searching)</asp:HyperLink>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/administer.aspx">상품 관리<br>(admin Only)</br></asp:HyperLink>
+            <br />
+            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/CustomerManagement.aspx">응용 페이지<br>(선택한 회원의 가입정보 확인하기)</br></asp:HyperLink>
+            <br />
+            <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Exclusiveness.aspx">기타 페이지1<br>(크리스마스 맞춤 <br>상품 추천)</br></br></asp:HyperLink>
+            <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Poinsettia.aspx">기타페이지2<br>(포인세티아 설명)</br></asp:HyperLink>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="article">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                기본 콘텐츠
+            </asp:ContentPlaceHolder>
+            <br />
+            <br />
+        </div>
+        <div class="footer">
+            <asp:ImageButton ID="ImageButton6" runat="server" ImageUrl="~/Logo/Flogo.png" Width="200px" />
+            <br />
+            쿠키 정책 · 법적 고지 사항 · 접근성 · 이용 약관 · 기밀 유지 · 정책 쿠키<br />
+            Copyright © 2021 스마트IT과 202031011 박지민. All rights reserved<br />
+            <br />
+            <br />
+            <strong>스마트IT과 202031011 박지민</strong></div>
+    </form>
+</body>
+</html>
